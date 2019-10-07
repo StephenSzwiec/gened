@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta charset="utf-8">
+	<title>MSU Unofficial GenEd Credit Database</title>
+	<meta name="description" content="Shadow IT for commonsense queries">
+	<meta name="author" content="Stephen S Szwiec">
+<!--	<link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+	<script src="js/scripts.js"></script>
+
+	<h1><big>Minot State University</big> <br/>
+	<small>Unofficial GenEd Credit Database</small></h1>
+	<h3>Please select which credits are needed for a list of classes that match:</h3>
+	<div class="mainpanel" >
+		<form method="post" action="process.php">
+		    <p>Return intersect of credit search?</p>
+			<input type="checkbox" name="intersectCheck[]" value="1">intersect<br>
+			<p>What credits to search for?</p>
+			<input type="checkbox" name="creditCheck[]" value="ccs1"/>CCS1<br/>
+			<input type="checkbox" name="creditCheck[]" value="ccs2"/>CCS2<br/>
+			<input type="checkbox" name="creditCheck[]" value="ccs3"/>CCS3<br/>
+			<input type="checkbox" name="creditCheck[]" value="ccs4"/>CCS4<br/>
+			<input type="checkbox" name="creditCheck[]" value="ccs5"/>CCS5<br/>
+			<input type="checkbox" name="creditCheck[]" value="ccs6"/>CCS6<br/>
+			<input type="checkbox" name="creditCheck[]" value="psr1"/>PSR1<br/>
+			<input type="checkbox" name="creditCheck[]" value="psr2"/>PSR2<br/>
+			<input type="checkbox" name="creditCheck[]" value="psr3"/>PSR3<br/>
+			<input type="checkbox" name="creditCheck[]" value="ip1"/>IP1<br/>
+			<input type="checkbox" name="creditCheck[]" value="ip2"/>IP2<br/>
+			<input type="submit" name="formSubmit" value="Search by credits provided"/>
+		</form>	
+		<br />
+		<form method="post" action="process.php">
+		    <select name="formClass">
+			    <option value="test">test<option>
+    		</select>
+	    	    <input type="submit" name="formSubmit" value="Search by Class"/>
+		</form>
+	</div>
+
+</body>
+</html>
